@@ -7,16 +7,21 @@ var PORT = process.env.PORT || 5000;
 /*var server = app.listen(80, function () {
     console.log('Bem vindo!');
 });*/
-var server = app.listen(PORT);
+//var server = app.listen(PORT);
+app.listen(PORT);
 
-var io = require('socket.io').listen(server);
+//var io = require('socket.io').listen(server);
 
 
 /*  Criar uma variável 'io' dentro do express  */
-app.set('io', io);
+//app.set('io', io);
 
 /*  Criar a conexão por websocket  */
 
+
+
+
+/*
 io.on('connection', function (socket) {
     console.log('Usuário conectou');
 
@@ -30,7 +35,7 @@ io.on('connection', function (socket) {
         socket.broadcast.emit('msgParaCliente', {apelido : data.apelido, mensagem : data.mensagem});   
         
         
-         /*  Participantes*/
+         /*  Participantes
         if(parseInt(data.apelido_atualizado_nos_clientes) == 0){
             socket.emit('participantesParaCliente',
                     {apelido : data.apelido});
@@ -40,7 +45,7 @@ io.on('connection', function (socket) {
         }
           
     
-    });
+    });  */
     
     
     
