@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(expressValidator());
 
 consign()
-    .include('app')
+    .include('./app')
     .into(app);
 
 module.exports = app;
