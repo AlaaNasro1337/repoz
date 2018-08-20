@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 /*   Configurar o middleware  express-validator*/
 app.use(expressValidator());
 
-consign({cwd: process.cwd()+ '/'})
+consign({cwd: process.cwd()+ './'})
     .include('controllers')
     .then('routes')
     .into(app);
