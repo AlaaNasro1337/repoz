@@ -31,7 +31,7 @@ app.use(expressValidator());
 
 consign()
     .include('/app/routes')
-    .then('/app/controllers')
+    .then('/app/controllers/index.js')
     .into(app);
 
 module.exports = app;
