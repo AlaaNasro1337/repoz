@@ -1,6 +1,7 @@
 /*   Importar o módulo do framework Express */
 
 var express = require('express');
+var path = require('path');
 
 /*   Importar o módulo do consign  */
 
