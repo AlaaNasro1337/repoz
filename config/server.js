@@ -29,9 +29,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 /*   Configurar o middleware  express-validator*/
 app.use(expressValidator());
 
-consign()
-    .include(path.join('app/routes'))
-    .then(path.join('app/controllers'))
+consign({cwd: process.cwd()})
+    .include('app/routes')
+    .then('app/controllers')
     .into(app);
 
 module.exports = app;
