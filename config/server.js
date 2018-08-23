@@ -30,8 +30,8 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(expressValidator());
 
 consign()
-    .include(__dirname +'./app/routes')
-    .then(__dirname +'./app/controllers/index.js')
+    .include(path.join('/app/routes'))
+    .then(path.join('/app/controllers/index.js'))
     .into(app);
 
 module.exports = app;
